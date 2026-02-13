@@ -2,64 +2,28 @@
 ---
 @import "main";
 
-/* 強制改寫背景色 */
-body {
-  background-color: #fff9fb !important;
+/* 1. 直接修改主題的 Light Mode 變數 (優先權最高) */
+html[data-mode="light"] {
+  --main-bg: #fff9fb !important;    /* 背景：草莓牛奶 */
+  --sidebar-bg: #ffe4e1 !important; /* 側欄：玫瑰粉白 */
+  --link-color: #ff69b4 !important; /* 連結：熱情粉紅 */
+  --heading-color: #d87093 !important; /* 標題：蒼紫羅蘭紅 */
+  --card-bg: #ffffff !important;
+  --topbar-bg: rgba(255, 255, 255, 0.7) !important;
 }
 
-#sidebar {
-  background-color: #ffe4e1 !important;
-}
-
-/* 改寫連結顏色 */
-a {
-  color: #ff69b4 !important;
-}
-
-/* ==========================================================================
-   可愛風改造計畫：粉嫩肉球主題
-   ========================================================================== */
-
-:root {
-  /* --- 顏色重定義 (以粉色、米白為主) --- */
-  --main-wrapper-bg: #fff9fb;    /* 極淺粉紅背景，像草莓牛奶 */
-  --sidebar-bg: #ffe4e1;         /* 側欄改為玫瑰粉白 */
-  --topbar-wrapper-bg: #ffffff;
-  --search-wrapper-bg: #fff0f5;  /* 搜尋框變淡紫色 */
-  
-  /* 文字與連結 */
-  --link-color: #ff69b4;         /* 連結改為熱情粉紅 */
-  --link-underline-color: #ffc0cb;
-  --heading-color: #d87093;      /* 標題改為蒼紫羅蘭紅 */
-  --text-color: #5f4b4b;         /* 深棕色文字，比純黑更柔和 */
-
-  /* 卡片與陰影 */
-  --card-bg: #ffffff;
-  --card-shadow: 0 8px 20px rgba(255, 182, 193, 0.3); /* 粉色的輕柔陰影 */
-}
-
-/* --- 圓潤化處理 (可愛感的來源) --- */
+/* 2. 圓潤化處理 */
 .card, .btn, img, .post-content code, .post-tag, .search-wrapper {
-  border-radius: 20px !important; /* 讓所有方角變圓 */
+  border-radius: 20px !important;
 }
 
-/* --- 側欄頭像圓角 (稍微變圓點) --- */
+/* 3. 側欄頭像 */
 #avatar {
-  border: 3px solid #ffb6c1;
-  padding: 2px;
-  border-radius: 50%;
+  border: 3px solid #ffb6c1 !important;
+  border-radius: 50% !important;
 }
 
-/* --- 滑鼠懸停動畫 --- */
-.card:hover {
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-  box-shadow: 0 12px 25px rgba(255, 105, 180, 0.2);
-}
-
-/* --- 側欄連結選中狀態 --- */
-#sidebar ul li.active a, #sidebar ul li a:hover {
-  background-color: #ffb6c1 !important;
-  color: white !important;
-  border-radius: 10px;
+/* 4. 側欄文字顏色強制修正 */
+#sidebar a, #sidebar .site-title {
+  color: #5f4b4b !important; /* 柔和深棕色 */
 }

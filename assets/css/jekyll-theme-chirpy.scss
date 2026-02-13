@@ -10,11 +10,6 @@
 
 /* append your custom style below */
 /* ===== 可愛粉色模式 ===== */
-
-:root {
-  --sidebar-hover-bg: rgba(255, 122, 162, 0.15);
-}
-
 /* 主背景 */
 body, footer {
   background-color: #fff8fb !important;
@@ -61,4 +56,23 @@ a {
 
 a:hover {
   color: #ff4f88;
+}
+
+/* ===== 強制覆蓋 Sidebar Hover ===== */
+
+/* Sidebar 項目 hover */
+#sidebar .nav-item:hover,
+#sidebar .nav-link:hover,
+#sidebar .nav-item.active,
+#sidebar .nav-link.active {
+  background-color: rgba(255, 122, 162, 0.2) !important;
+  color: #d63384 !important;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 左邊小 icon 也變色 */
+#sidebar .nav-link:hover i,
+#sidebar .nav-link.active i {
+  color: #ff4f88 !important;
 }

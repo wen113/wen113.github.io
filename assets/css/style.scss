@@ -1,8 +1,20 @@
 ---
-
 ---
-
 @import "main";
+
+/* 強制改寫背景色 */
+body {
+  background-color: #fff9fb !important;
+}
+
+#sidebar {
+  background-color: #ffe4e1 !important;
+}
+
+/* 改寫連結顏色 */
+a {
+  color: #ff69b4 !important;
+}
 
 /* ==========================================================================
    可愛風改造計畫：粉嫩肉球主題

@@ -14,12 +14,12 @@ timezone: Asia/Taipei
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Wen的小宇宙 # the main title
+title: WenTech A Byte # the main title
 
 tagline: 資訊科學 × 生活紀錄 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  資訊學習與生活紀錄
+  Wen 科技輕鬆咬一口
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,7 +34,7 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Wen
+  name: Wen Chang
   email: vivanic1113@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link

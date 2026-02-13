@@ -1,33 +1,11 @@
 ---
 ---
-@import "main";
 
-/* 直接修改 Chirpy 亮色模式的底層變數 */
-html:not([data-mode]), html[data-mode='light'] {
-  --main-bg: #fff9fb !important;           /* 網頁背景色 */
-  --sidebar-bg: #ffe4e1 !important;        /* 側欄背景色 */
-  --topbar-bg: rgba(255, 255, 255, 0.7) !important;
-  --link-color: #ff69b4 !important;        /* 連結粉紅色 */
-  --heading-color: #d87093 !important;     /* 標題蒼紫羅蘭紅 */
-  --card-bg: #ffffff !important;           /* 文章卡片背景 */
-  --card-shadow: 0 8px 20px rgba(255, 182, 193, 0.3) !important;
-  --text-color: #5f4b4b !important;        /* 文字改為深棕色，更可愛 */
-}
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
-/* 圓潤化細節 */
-.card, .btn, img, .post-content code, .post-tag, .search-wrapper {
-  border-radius: 20px !important;
-}
-
-/* 側欄頭像增加粉色邊框 */
-#avatar {
-  border: 3px solid #ffb6c1 !important;
-  border-radius: 50% !important;
-}
-
-/* 側欄選中狀態顏色 */
-#sidebar ul li.active a, #sidebar ul li a:hover {
-  background-color: #ffb6c1 !important;
-  color: white !important;
-  border-radius: 10px;
-}
+/* append your custom style below */

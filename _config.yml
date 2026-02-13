@@ -225,6 +225,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-# 自訂 CSS
-custom_css: /assets/css/custom.css

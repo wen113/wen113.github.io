@@ -10,6 +10,44 @@
 
 /* append your custom style below */
 
+/* ===== 可愛粉色模式 ===== */
+
+/* 背景與主色系 */
+:root {
+  --main-bg: #fff8fb;
+  --sidebar-bg: #ffeef6;
+  --card-bg: #ffffff;
+  --text-color: #4a4a4a;
+
+  --link-color: #ff7aa2;
+  --link-hover-color: #ff4f88;
+
+  --btn-primary-bg: #ff7aa2;
+  --btn-primary-border: #ff7aa2;
+
+  --heading-color: #d63384;
+}
+
+/* 字體 */
+body {
+  font-family: "Nunito", "Helvetica Neue", sans-serif;
+}
+
+/* 卡片變圓一點 */
+.card {
+  border-radius: 18px;
+}
+
+/* Sidebar 圓角 */
+.sidebar {
+  border-radius: 20px;
+}
+
+/* 標題粉嫩一點 */
+h1, h2, h3 {
+  color: var(--heading-color);
+}
+
 /* 字體 */
 body {
   font-family: "Nunito", "Helvetica Neue", sans-serif;
@@ -23,3 +61,5 @@ a {
 a:hover {
   color: #ff4f88;
 }
+
+

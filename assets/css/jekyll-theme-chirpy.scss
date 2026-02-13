@@ -11,6 +11,10 @@
 /* append your custom style below */
 /* ===== 可愛粉色模式 ===== */
 
+:root {
+  --sidebar-hover-bg: rgba(255, 122, 162, 0.15);
+}
+
 /* 主背景 */
 body, footer {
   background-color: #fff8fb !important;

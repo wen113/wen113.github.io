@@ -10,43 +10,42 @@
 
 /* append your custom style below */
 
-/* ===== 可愛粉色模式 ===== */
+/* ===== 可愛粉色主題（實際覆蓋版）===== */
 
-/* 主背景 */
+/* 整體背景 */
 body {
   background-color: #fff8fb !important;
-  font-family: "Nunito", "Helvetica Neue", sans-serif;
 }
 
-/* Sidebar 背景 */
+/* 側邊欄背景 */
 #sidebar {
   background-color: #ffeef6 !important;
 }
 
 /* 文章卡片 */
 .card {
-  border-radius: 18px;
   background-color: #ffffff !important;
+  border-radius: 18px !important;
   box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
 }
 
 /* 標題顏色 */
-h1, h2, h3 {
-  color: #d63384;
+h1, h2, h3, h4 {
+  color: #d63384 !important;
 }
 
 /* 按鈕 */
 .btn-primary {
   background-color: #ff7aa2 !important;
   border-color: #ff7aa2 !important;
+  border-radius: 50px !important;
 }
 
 /* 連結 */
 a {
-  color: #ff7aa2;
+  color: #ff7aa2 !important;
 }
 
 a:hover {
-  color: #ff4f88;
+  color: #ff4f88 !important;
 }
-

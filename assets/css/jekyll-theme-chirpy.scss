@@ -12,9 +12,14 @@
 /* ===== 可愛粉色模式 ===== */
 
 /* 主背景 */
-body {
+body, footer {
   background-color: #fff8fb !important;
   font-family: "Nunito", "Helvetica Neue", sans-serif;
+}
+
+/* Topbar 背景 */
+#topbar-wrapper {
+  background-color: #fff8fb !important;
 }
 
 /* Sidebar 背景 */

@@ -27,6 +27,11 @@ body, footer {
   background-color: #ffeef6 !important;
 }
 
+/* 移除 footer 上方那條線 */
+footer {
+  border-top: none !important;
+}
+
 /* 文章卡片 */
 .card {
   border-radius: 18px;

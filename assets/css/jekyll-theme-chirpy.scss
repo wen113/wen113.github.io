@@ -12,48 +12,36 @@
 
 /* ===== 可愛粉色模式 ===== */
 
-/* 背景與主色系 */
-:root {
-  --main-bg: #fff8fb;
-  --sidebar-bg: #ffeef6;
-  --card-bg: #ffffff;
-  --text-color: #4a4a4a;
-
-  --link-color: #ff7aa2;
-  --link-hover-color: #ff4f88;
-
-  --btn-primary-bg: #ff7aa2;
-  --btn-primary-border: #ff7aa2;
-
-  --heading-color: #d63384;
-}
-
-/* 字體 */
+/* 主背景 */
 body {
+  background-color: #fff8fb !important;
   font-family: "Nunito", "Helvetica Neue", sans-serif;
 }
 
-/* 卡片變圓一點 */
+/* Sidebar 背景 */
+#sidebar {
+  background-color: #ffeef6 !important;
+}
+
+/* 文章卡片 */
 .card {
   border-radius: 18px;
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
 }
 
-/* Sidebar 圓角 */
-.sidebar {
-  border-radius: 20px;
-}
-
-/* 標題粉嫩一點 */
+/* 標題顏色 */
 h1, h2, h3 {
-  color: var(--heading-color);
+  color: #d63384;
 }
 
-/* 字體 */
-body {
-  font-family: "Nunito", "Helvetica Neue", sans-serif;
+/* 按鈕 */
+.btn-primary {
+  background-color: #ff7aa2 !important;
+  border-color: #ff7aa2 !important;
 }
 
-/* 粉紅連結 */
+/* 連結 */
 a {
   color: #ff7aa2;
 }
@@ -61,5 +49,4 @@ a {
 a:hover {
   color: #ff4f88;
 }
-
 

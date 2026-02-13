@@ -1,6 +1,5 @@
 ---
 ---
-
 /* prettier-ignore */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
@@ -9,42 +8,70 @@
 ';
 
 /* append your custom style below */
-/* ===== 可愛粉色模式 ===== */
 
-/* 主背景 */
-body {
+/* ===== WenTech 粉紅風全面覆蓋 ===== */
+
+/* 全站背景 */
+body, .page, .site-content {
   background-color: #fff8fb !important;
-  font-family: "Nunito", "Helvetica Neue", sans-serif;
 }
 
-/* Sidebar 背景 */
+/* 側邊欄背景 */
 #sidebar {
   background-color: #ffeef6 !important;
 }
 
-/* 文章卡片 */
-.card {
-  border-radius: 18px;
+/* 卡片、文章內容背景 */
+.article-card,
+.post-card,
+.content-body,
+footer,
+.sidebar-toggle + .sidebar {
   background-color: #ffffff !important;
-  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
+  border-radius: 18px !important;
 }
 
-/* 標題顏色 */
-h1, h2, h3 {
-  color: #d63384;
+/* 連結顏色 */
+a, a:focus {
+  color: #ff7aa2 !important;
+}
+a:hover {
+  color: #ff4f88 !important;
 }
 
-/* 按鈕 */
+/* 主要按鈕 */
+.btn,
 .btn-primary {
   background-color: #ff7aa2 !important;
   border-color: #ff7aa2 !important;
+  color: #fff !important;
+  border-radius: 18px !important;
+}
+.btn:hover,
+.btn-primary:hover {
+  background-color: #ff4f88 !important;
+  border-color: #ff4f88 !important;
 }
 
-/* 連結 */
-a {
-  color: #ff7aa2;
+/* 標題顏色 */
+h1, h2, h3, h4 {
+  color: #d63384 !important;
 }
 
-a:hover {
-  color: #ff4f88;
+/* 區塊陰影柔和 */
+.article-card,
+.post-card {
+  box-shadow: 0px 4px 12px rgba(255, 122, 162, 0.15) !important;
+}
+
+/* 表格標題顏色 */
+table th {
+  background: #ffeef6 !important;
+  color: #d63384 !important;
+}
+
+/* 區塊標題底色 */
+.section > h2 {
+  color: #d63384 !important;
+  border-bottom: 2px solid #ff7aa2 !important;
 }

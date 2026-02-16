@@ -63,8 +63,9 @@ a:hover {
 /* Sidebar 項目 hover */
 /*#sidebar .nav-item:hover,*/
 #sidebar .nav-link:hover,
-/*#sidebar .nav-item.active,*/
-#sidebar .nav-link.active {
+/*#sidebar .nav-item.active,
+#sidebar .nav-link.active*/
+#sidebar ul li.nav-item.active .nav-link {
   background-color: rgba(255, 122, 162, 0.2) !important;
   color: #d63384 !important;
   border-radius: 12px;

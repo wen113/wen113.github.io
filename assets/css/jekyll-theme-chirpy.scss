@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: #B5495B;
+  color: #D05A6E;
 }
 
 /* ===== 強制覆蓋 Sidebar Hover ===== */
@@ -75,13 +75,13 @@ a:hover {
 /* 當選單被選中或滑鼠移上去時的文字顏色 */
 #sidebar .nav-item.active a.nav-link span,
 #sidebar .nav-item a.nav-link:hover span {
-  color: #B5495B !important; /* 選中時文字變白色 */
+  color: #D05A6E !important; /* 選中時文字變白色 */
 }
 
 /* 左邊小 icon 也變色 */
 #sidebar .nav-link:hover i,
 #sidebar .nav-item.active a.nav-link i {
-  color: #B5495B !important;
+  color: #D05A6E !important;
 }
 
 /* 網站名稱 basic */

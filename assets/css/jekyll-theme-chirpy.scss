@@ -73,7 +73,7 @@ a:hover {
 }
 
 /* 當選單被選中或滑鼠移上去時的文字顏色 */
-#sidebar .nav-item.active a.nav-link span,
+#sidebar ul li.nav-item a.nav-link i,
 #sidebar .nav-item a.nav-link:hover span {
   color: #B5495B !important; /* 選中時文字變白色 */
 }

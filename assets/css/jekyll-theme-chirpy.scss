@@ -83,3 +83,17 @@ a:hover {
 #sidebar .nav-item.active a.nav-link i {
   color: #B5495B !important;
 }
+
+/* 網站名稱 basic */
+#sidebar .site-title {
+  transition: all 0.3s ease-in-out !important; /* 讓所有變化在 0.3 秒內平滑完成 */
+  display: inline-block; /* 必須加上這行，transform 縮放效果才會生效 */
+}
+
+/* 網站名稱 Hover */
+#sidebar .site-title:hover {
+  color: #ff69b4 !important;           /* 變為更亮的熱情粉紅 */
+  text-shadow: 0 0 12px rgba(255, 105, 180, 0.4); /* 增加一層柔和粉紅光暈 */
+  transform: scale(1.08) rotate(-2deg); /* 稍微放大並傾斜 2 度，增加俏皮感 */
+  text-decoration: none !important;    /* 確保不會出現底線 */
+}

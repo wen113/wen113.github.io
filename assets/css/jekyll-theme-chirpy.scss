@@ -80,6 +80,6 @@ a:hover {
 
 /* 左邊小 icon 也變色 */
 #sidebar .nav-link:hover i,
-#sidebar ul li.nav-item a.nav-link i {
+#sidebar .nav-item.active ul li.nav-item a.nav-link i {
   color: #B5495B !important;
 }

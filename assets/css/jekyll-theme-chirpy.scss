@@ -72,14 +72,14 @@ a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* 更改側欄選單文字顏色 */
-#sidebar .nav-item a.nav-link span {
-  color: #B5495B !important;
-  font-weight: 600;          /* 稍微加粗，讓文字更明顯 */
+/* 當選單被選中或滑鼠移上去時的文字顏色 */
+#sidebar .nav-item.active a.nav-link span,
+#sidebar .nav-item a.nav-link:hover span {
+  color: #B5495B !important; /* 選中時文字變白色 */
 }
 
 /* 左邊小 icon 也變色 */
 #sidebar .nav-link:hover i,
-#sidebar .nav-link.active i {
+#sidebar .nav-link.active a.nav-link i {
   color: #B5495B !important;
 }

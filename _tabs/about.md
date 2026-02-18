@@ -1,11 +1,9 @@
 ---
 layout: page
-title: 關於 Wen Chang
+title: Hi! 我是 Wen Chang
 icon: fas fa-info-circle
 order: 4
 ---
-
-# Hi! 我是 Wen Chang
 
 歡迎來到 **WenTech A Byte** ｜ **科技輕鬆咬一口** 
 

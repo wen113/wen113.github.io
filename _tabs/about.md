@@ -5,7 +5,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# 歡迎來到 **WenTech A Byte**
+歡迎來到 **WenTech A Byte**
 
 這裡是我記錄學習軌跡、3C 敗家日常以及科技創意的實驗室
 
@@ -47,4 +47,4 @@ order: 4
 
 ---
 > WenTech A Byte  
-> 一口一口，科技輕鬆一口咬
+> 一口一口，科技輕鬆咬一口

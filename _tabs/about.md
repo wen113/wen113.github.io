@@ -5,7 +5,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-歡迎來到 **WenTech A Byte** ｜ **科技輕鬆咬一口** 
+#歡迎來到 **WenTech A Byte**
 
 這裡是我紀錄學習、3C 敗家（?）以及生活創意的小角落
 
@@ -14,29 +14,36 @@ order: 4
 ## 💡 我最近在忙什麼？
 
 ### 🤖 AI 學習與探索
-把 AI 結合到日常工作，學會怎麼「叫 AI 幫我做事」
+持續探索AI 的可能性，真正結合到日常工作與創作流程
 
-### 📱 3C 小物與效率工具
-熱衷於挖掘各種能提升生產力的科技產品與資訊技巧
+### 🖥 3C 小物與效率工具
+熱衷挖掘各種提升生產力的科技小物與數位工具
 
-### 🐾 寵物黏土動畫
-正在學習製作「寵物黏土動畫」，用逐格攝影的方式，紀錄下牠們最萌的瞬間
+### 🐾 寵物療癒創作
+透過 **AI 建模與影像生成技術**，將毛孩們最萌的瞬間轉化為「療癒系黏土動畫」
+科技與手作結合，保留溫度，也保留回憶
 
 ---
 
 ## 📄 線上履歷 (Online Resume)
 
-* **後端開發**：PHP / MySQL (資料庫管理與設計)
-* **前端開發**：HTML / JavaScript / jQuery
-* **開發實踐**：系統分析 / 專案開發管理
+### 💻 技術專長
+- **後端開發**：PHP / MySQL / SQL  
+- **前端開發**：HTML / JavaScript / jQuery  
+- **系統實務**：系統分析 / 專案開發管理  
 
-{: .prompt-info }
-
-> **「工程師的理性負責處理問題，創作人的感性負責享受生活。」**
+### 🔎 擅長領域
+- 流程優化與效率提升  
+- 技術整合與應用實踐  
+- AI 工具導入與應用設計 
 
 ---
 
 ## ✨ 我在這裡↓
 
-- **GitHub**: [wen113](https://github.com/wen113)
-- **Instagram**: [@wen.mo.ku](https://www.instagram.com/wen.mo.ku)
+- **GitHub**: [wen113](https://github.com/wen113){:target="_blank"}
+- **Instagram**: [@wen.mo.ku](https://www.instagram.com/wen.mo.ku){:target="_blank"}
+
+---
+> WenTech A Byte  
+> 一口一口，科技輕鬆一口咬

@@ -9,6 +9,7 @@
 ';
 
 /* append your custom style below */
+
 /* ===== 可愛粉色模式 ===== */
 /* 主背景 */
 body, footer {
@@ -38,9 +39,40 @@ footer {
   box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
 }
 
-/* 標題顏色 */
-h1, h2, h3 {
-  color: #B76674;
+/* 標題 */
+/* H1: 文章主標題 */
+h1 {
+  font-size: 2.2rem !important; 
+  color: #B76674 !important;
+  font-weight: 800 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* H2: 大段落標題 (增加粉色側邊條) */
+h2 {
+  font-size: 1.8rem !important;
+  color: #db7093 !important; 
+  border-left: 6px solid #ffb6c1 !important; /* 粉紅肉球色側邊條 */
+  padding-left: 12px !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+/* H3: 小子題 */
+h3 {
+  font-size: 1.4rem !important;
+  color: #5f4b4b !important;   /* 改用柔和深棕色，做出色彩區隔 */
+  border-bottom: 2px dashed #ffc0cb !important; /* 下方加上粉色虛線 */
+  display: inline-block !important; /* 讓虛線只跟著文字長度 */
+  padding-bottom: 3px !important;
+  margin-top: 2rem !important;
+  font-weight: 600 !important;
+}
+
+/* 移除預設的底線 (讓我們的自定義樣式更乾淨) */
+h2 {
+  border-bottom: none !important;
 }
 
 /* 按鈕 */

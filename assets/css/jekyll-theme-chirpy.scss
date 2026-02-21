@@ -41,7 +41,7 @@ footer {
 
 #post-list .card .card-body .card-title {
 color: #C4828E !important;
-font-size: 1.25rem;
+font-size: 1.25rem !important;
 }
 
 /* 標題 */
@@ -82,11 +82,11 @@ h3 {
 
 /* 連結 */
 a {
-  color: #ff7aa2;
+  color: #DC9FB4;
 }
 
 a:hover {
-  color: #D05A6E;
+  color: #E87A90;
 }
 
 /* ===== 強制覆蓋 Sidebar Hover ===== */

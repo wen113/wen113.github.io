@@ -39,8 +39,8 @@ footer {
   box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
 }
 
-.card-title {
-color: #BE7481 !important;
+#post-list .card .card-body .card-title {
+color: #C4828E !important;
 font-size: 1.25rem;
 }
 
@@ -48,7 +48,7 @@ font-size: 1.25rem;
 /* H1: 文章主標題 */
 h1 {
   font-size: 2rem !important; 
-  color: #BE7481 !important;
+  color: #C4828E !important;
   font-weight: 800 !important;
   margin-bottom: 1.5rem !important;
 }

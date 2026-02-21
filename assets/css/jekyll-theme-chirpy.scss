@@ -39,11 +39,16 @@ footer {
   box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
 }
 
+.card-title {
+color: #BE7481 !important;
+font-size: 1.25rem;
+}
+
 /* 標題 */
 /* H1: 文章主標題 */
 h1 {
   font-size: 2rem !important; 
-  color: #749392 !important;
+  color: #BE7481 !important;
   font-weight: 800 !important;
   margin-bottom: 1.5rem !important;
 }
@@ -57,6 +62,7 @@ h2 {
   margin-top: 2.5rem !important;
   margin-bottom: 1.2rem !important;
   font-weight: 700 !important;
+  border-bottom: none !important;
 }
 
 /* H3: 小子題 */
@@ -66,11 +72,6 @@ h3 {
   padding-bottom: 3px !important;
   margin-top: 2rem !important;
   font-weight: 600 !important;
-}
-
-/* 移除預設的底線 (讓我們的自定義樣式更乾淨) */
-h2 {
-  border-bottom: none !important;
 }
 
 /* 按鈕 */

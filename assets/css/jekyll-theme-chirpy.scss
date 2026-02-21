@@ -54,7 +54,6 @@ h2 {
   color: #db7093 !important; 
   border-left: 6px solid #ffb6c1 !important; /* 粉紅肉球色側邊條 */
   background-color: rgba(255, 122, 162, 0.2) !important;
-  display: inline-block !important; /* 讓虛線只跟著文字長度 */
   padding-left: 12px !important;
   margin-top: 2.5rem !important;
   margin-bottom: 1.2rem !important;
@@ -64,7 +63,7 @@ h2 {
 /* H3: 小子題 */
 h3 {
   font-size: 1.3rem !important;
-  color: #4A8C8A !important;   /* 改用柔和深棕色，做出色彩區隔 */
+  color: #79A9A7 !important;   /* 改用柔和深棕色，做出色彩區隔 */
   padding-bottom: 3px !important;
   margin-top: 2rem !important;
   font-weight: 600 !important;

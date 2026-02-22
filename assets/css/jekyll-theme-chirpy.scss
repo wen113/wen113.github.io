@@ -55,6 +55,7 @@ h1 {
 
 /* H2: 大段落標題 (增加粉色側邊條) */
 h2 {
+  content: "\f1b0";             /* Font Awesome 的肉球代碼 */
   font-size: 1.5rem !important;
   color: #D487A2 !important; 
   border-left: 6px solid #ffb6c1 !important; /* 側邊條 */
@@ -85,8 +86,18 @@ a {
   color: #DC9FB4;
 }
 
-a:hover {
-  color: #4281A4 !important;
+/* 強效版：針對所有模式下的連結懸停效果 */
+html:not([data-mode]) #main-wrapper a:hover, 
+html[data-mode="light"] #main-wrapper a:hover,
+html[data-mode="dark"] #main-wrapper a:hover {
+  color: #E87A90 !important;           /* 你選的優雅藍 */
+  text-decoration: underline !important; /* 增加底線，讓使用者知道「指到了」 */
+  transition: color 0.2s ease-in-out;   /* 增加平滑過渡感 */
+  border-bottom-color: #E87A90 !important; /* 針對 Chirpy 文章內的連結底線變色 */
+}
+
+/*a:hover {
+  color: #4281A4 !important; */
 }
 
 /* ===== 強制覆蓋 Sidebar Hover ===== */

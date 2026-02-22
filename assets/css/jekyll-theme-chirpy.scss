@@ -94,6 +94,12 @@ html[data-mode="dark"] #main-wrapper a:hover {
   border-bottom-color: #E87A90 !important; /* 針對 Chirpy 文章內的連結底線變色 */
 }
 
+html:not([data-mode]), html[data-mode='light'] {
+  /* 把這台車的「預設油漆」直接換成粉紅色 */
+  --link-color: #ff69b4 !important; 
+  --link-underline-color: #ffc0cb !important;
+}
+
 /* ===== 強制覆蓋 Sidebar Hover ===== */
 
 /* Sidebar 項目 hover */
@@ -147,9 +153,4 @@ html[data-mode="dark"] #main-wrapper a:hover {
   text-decoration: none !important;    /* 移除懸停底線 */
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; /* 增加淡淡的粉紅光暈 */
   transform: translateY(-2px);         /* 輕微往上跳一下 */
-}
-
-/* --- 標籤懸停、聚焦、活動狀態 --- */
-#search-results a, #search-hints .post-tag, a, .post-tags .post-tag:hover, .tag:hover {
-    color: #ffc0cb;
 }

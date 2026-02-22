@@ -55,7 +55,6 @@ h1 {
 
 /* H2: 大段落標題 (增加粉色側邊條) */
 h2 {
-  content: "\f1b0";             /* Font Awesome 的肉球代碼 */
   font-size: 1.5rem !important;
   color: #D487A2 !important; 
   border-left: 6px solid #ffb6c1 !important; /* 側邊條 */
@@ -90,23 +89,15 @@ a {
 html:not([data-mode]) #main-wrapper a:hover, 
 html[data-mode="light"] #main-wrapper a:hover,
 html[data-mode="dark"] #main-wrapper a:hover {
-  color: #E87A90 !important;           /* 你選的優雅藍 */
-  text-decoration: underline !important; /* 增加底線，讓使用者知道「指到了」 */
+  color: #E87A90 !important;
   transition: color 0.2s ease-in-out;   /* 增加平滑過渡感 */
   border-bottom-color: #E87A90 !important; /* 針對 Chirpy 文章內的連結底線變色 */
 }
 
-/*a:hover {
-  color: #4281A4 !important;
-} */
-
 /* ===== 強制覆蓋 Sidebar Hover ===== */
 
 /* Sidebar 項目 hover */
-/*#sidebar .nav-item:hover,*/
 #sidebar .nav-link:hover,
-/*#sidebar .nav-item.active,
-#sidebar .nav-link.active*/
 #sidebar ul li.nav-item.active .nav-link {
   background-color: rgba(255, 122, 162, 0.2) !important;
   color: #d63384 !important;
@@ -138,4 +129,24 @@ html[data-mode="dark"] #main-wrapper a:hover {
   text-shadow: 0 0 12px rgba(255, 105, 180, 0.4); /* 增加一層柔和粉紅光暈 */
   transform: scale(1.08) rotate(-2deg); /* 稍微放大並傾斜 2 度，增加俏皮感 */
   text-decoration: none !important;    /* 確保不會出現底線 */
+}
+
+/* --- 文章標籤基本樣式 --- */
+.post-tag {
+  background-color: #fff0f5 !important; /* 極淺的薰衣草粉底色 */
+  color: #d87093 !important;           /* 深粉紅色的文字 */
+  border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
+  padding: 4px 12px !important;        /* 讓標籤胖一點，比較可愛 */
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important; /* 平滑變色效果 */
+}
+
+/* --- 標籤滑鼠懸停 (Hover) 樣式 --- */
+.post-tag:hover {
+  background-color: #ffb6c1 !important; /* 懸停時底色變深 */
+  color: #ffffff !important;           /* 文字變為純白 */
+  border-color: #ffb6c1 !important;
+  text-decoration: none !important;    /* 移除懸停底線 */
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; /* 增加淡淡的粉紅光暈 */
+  transform: translateY(-2px);         /* 輕微往上跳一下 */
 }

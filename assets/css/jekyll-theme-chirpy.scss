@@ -176,3 +176,9 @@ html:not([data-mode]), html[data-mode='light'] {
   background-color: #fff0f5 !important;
   color: #d87093 !important;
 }
+
+/* 徹底移除所有按鈕的藍色 focus 框 */
+button:focus, .btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

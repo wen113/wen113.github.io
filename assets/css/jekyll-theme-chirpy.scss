@@ -140,15 +140,16 @@ html[data-mode="dark"] #main-wrapper a:hover {
   transition: all 0.3s ease !important; /* 平滑變色效果 */
 }
 
+/* --- 標籤滑鼠懸停 (Hover) 樣式 --- */
+.post-tag:hover {
+  background-color: #FFEBF1 !important; /* 懸停時底色變深 */
+  border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
+  text-decoration: none !important;    /* 移除懸停底線 */
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; /* 增加淡淡的粉紅光暈 */
+  transform: translateY(-2px);         /* 輕微往上跳一下 */
+}
+
 /* --- 標籤懸停、聚焦、活動狀態 --- */
-.post-tag:hover, 
-.post-tag:focus, 
-.post-tag:active {
-  background-color: #FFEBF1 !important;
-  border: 1px solid #ffc0cb !important;
-  text-decoration: none !important;
-  /* 重點：把藍色的 box-shadow 換成粉紅色，並移除 outline */
-  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; 
-  outline: none !important; 
-  color: #d87093 !important; /* 確保滑過時字不會變回藍色 */
+#search-results a, #search-hints .post-tag, a, .post-tags .post-tag:hover, .tag:hover {
+    color: #ffc0cb;
 }

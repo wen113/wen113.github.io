@@ -134,7 +134,6 @@ html[data-mode="dark"] #main-wrapper a:hover {
 /* --- 文章標籤基本樣式 --- */
 .post-tag {
   background-color: #fff0f5 !important; /* 極淺的薰衣草粉底色 */
-  color: #d87093 !important;           /* 深粉紅色的文字 */
   border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
   padding: 4px 12px !important;        /* 讓標籤胖一點，比較可愛 */
   font-weight: 600 !important;
@@ -143,9 +142,9 @@ html[data-mode="dark"] #main-wrapper a:hover {
 
 /* --- 標籤滑鼠懸停 (Hover) 樣式 --- */
 .post-tag:hover {
-  background-color: #ffb6c1 !important; /* 懸停時底色變深 */
+  background-color: #FFEBF1 !important; /* 懸停時底色變深 */
   color: #ffffff !important;           /* 文字變為純白 */
-  border-color: #ffb6c1 !important;
+  border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
   text-decoration: none !important;    /* 移除懸停底線 */
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; /* 增加淡淡的粉紅光暈 */
   transform: translateY(-2px);         /* 輕微往上跳一下 */

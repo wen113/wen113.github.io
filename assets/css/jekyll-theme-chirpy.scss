@@ -155,30 +155,9 @@ html:not([data-mode]), html[data-mode='light'] {
   transform: translateY(-2px);         /* 輕微往上跳一下 */
 }
 
-/* 針對所有帶有 outline-primary 的按鈕進行改色 */
-.btn-outline-primary {
-  border-color: #ffc0cb !important;      /* 框線改粉紅 */
-  background-color: transparent !important;
-}
-
-/* 2. 處理 Hover (滑鼠移上去) 的瞬間 */
-.btn-outline-primary:hover, 
-.btn-outline-primary:active, 
-.btn-outline-primary:focus {
-  background-color: #ffb6c1 !important;  /* 底色變粉紅 */
-  border-color: #ffb6c1 !important;      /* 框線跟著變 */
-  /* 關鍵：移除點擊時出現的藍色發光 (box-shadow) */
-  box-shadow: 0 0 0 0.2rem rgba(255, 182, 193, 0.5) !important;
-}
-
-/* 3. 針對 Chirpy 特有的「標籤」類按鈕額外加強 */
-.post-tag.btn-outline-primary {
-  background-color: #fff0f5 !important;
-  color: #d87093 !important;
-}
-
-/* 徹底移除所有按鈕的藍色 focus 框 */
-button:focus, .btn:focus {
-  outline: none !important;
-  box-shadow: none !important;
+/* Overwrite bootstrap outline button */
+.btn.btn-outline-primary {
+  &:not(.disabled):hover {
+    border-color: #ffc0cb !important;
+  }
 }

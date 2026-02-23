@@ -185,7 +185,7 @@ html:not([data-mode]), html[data-mode='light'] {
 }
 
 /* 修改 Markdown 分隔線樣式 (hr) */
-.post-content hr {
+hr {
   border: 0;
   border-top: 2px dashed #ffc0cb !important; /* 粉紅虛線 */
   margin: 2.5rem 0 !important;              /* 增加上下間距，讓文章不擁擠 */

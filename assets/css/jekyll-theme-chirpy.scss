@@ -214,12 +214,6 @@ hr {
   border-left: none !important; /* 如果有預設邊框也一併移除 */
 }
 
-/* 2. 統一容器整體的左側位移 */
-.access, 
-#toc-wrapper {
-  padding-left: 0.75rem !important; /* 這裡的數值可以根據你的粉紅風格微調 */
-}
-
 /* 3. 修正 TOC 清單的對齊 */
 #toc {
   border-left: 1px solid #ffc0cb44 !important; /* 給 TOC 一條淡淡的粉紅導引線 */

@@ -220,3 +220,8 @@ html:not([data-mode]), html[data-mode='light'] {
 #toc-wrapper::before, .toc-border-cover {
   background: #fff8fb !important;
 }
+
+/* 將右側欄區塊（最近更新、熱門標籤）左側的直線改為粉紅色 */
+.access > section {
+  border-left: 1px solid #ffeef6 !important; /* 這裡可以換成你喜歡的粉色，例如 #ffb6c1 或 #D487A2 */
+}

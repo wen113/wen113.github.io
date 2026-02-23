@@ -210,8 +210,6 @@ hr {
 .access .panel-heading, 
 #toc-wrapper .panel-heading {
   padding-left: 0 !important;   /* 移除 HTML 標籤內建的 ps-3 */
-  margin-left: 0 !important;
-  border-left: none !important; /* 如果有預設邊框也一併移除 */
 }
 
 /* 3. 修正 TOC 清單的對齊 */

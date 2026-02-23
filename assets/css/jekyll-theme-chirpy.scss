@@ -207,11 +207,11 @@ hr {
 
 /* 2. 修正 TOC 的 Highlight 顏色 (把討厭的藍色換掉) */
 html:not([data-mode]), html[data-mode='light'] {
-  --toc-highlight: #ffb6c1 !important; /* 選中時的粉紅線 */
+  --toc-highlight: #809D9C !important; /* 選中時的粉紅線 */
 }
 
 a.toc-link {
-    color: #809D9C  !important;
+    color: #757575  !important;
 }
 
 /* 3. 讓 TOC 的導引線在滑動時更明顯 */

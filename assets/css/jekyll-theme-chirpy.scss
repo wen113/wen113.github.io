@@ -201,3 +201,38 @@ hr {
     height: 3rem;
     background: none !important;
 }
+
+/* ==========================================================================
+   修正右側欄 (Sidebar) 對齊問題
+   ========================================================================== */
+
+/* 1. 統一所有面板標題的左側距離 */
+.access .panel-heading, 
+#toc-wrapper .panel-heading {
+  padding-left: 0 !important;   /* 移除 HTML 標籤內建的 ps-3 */
+  margin-left: 0 !important;
+  border-left: none !important; /* 如果有預設邊框也一併移除 */
+}
+
+/* 2. 統一容器整體的左側位移 */
+.access, 
+#toc-wrapper {
+  padding-left: 0.75rem !important; /* 這裡的數值可以根據你的粉紅風格微調 */
+}
+
+/* 3. 修正 TOC 清單的對齊 */
+#toc {
+  border-left: 1px solid #ffc0cb44 !important; /* 給 TOC 一條淡淡的粉紅導引線 */
+  margin-left: 2px !important;
+  padding-left: 1rem !important;
+}
+
+/* TOC 選中時的粉紅泡泡效果 */
+#toc .toc-link.is-active-link {
+  color: #d87093 !important;
+  font-weight: 700 !important;
+}
+
+#toc .toc-link.is-active-link::before {
+  background-color: #d87093 !important; /* 左側小圓點或線變粉紅 */
+}

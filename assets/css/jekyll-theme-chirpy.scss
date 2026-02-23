@@ -82,7 +82,7 @@ h3 {
 
 /* 連結 */
 a {
-  color: #F4A7B9;
+  color: #C4828E;
 }
 
 /* 強效版：針對所有模式下的連結懸停效果 */
@@ -160,4 +160,17 @@ html:not([data-mode]), html[data-mode='light'] {
   &:not(.disabled):hover {
     border-color: #ffc0cb !important;
   }
+}
+
+/* 存檔頁面*/
+/* 移除存檔頁面奇數列的背景漸層 */
+#archives ul li:nth-child(odd) {
+    background-image: none !important; /* 徹底移除圖片/漸層 */
+    background-color: transparent !important; /* 或是設定為透明，跟隨大背景 */
+}
+
+#archives ul li {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px dashed #ffe4e1 !important; /* 加上粉色虛線分隔 */
 }

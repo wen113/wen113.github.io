@@ -190,3 +190,30 @@ hr {
   border-top: 2px dashed #ffc0cb !important; /* 虛線 */
   opacity: 1;
 }
+
+/* ==========================================================================
+   回歸 Chirpy 原生排版 (側欄專用)
+   ========================================================================== */
+
+/* 1. 讓側欄標題回歸原版間距，僅修改顏色與粗體 */
+#panel-wrapper .panel-heading {
+  color: #d87093 !important;      /* 粉紅文字 */
+  background-color: transparent !important; /* 移除底色塊，回歸簡約 */
+  border: none !important;         /* 移除邊框 */
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;   /* 原版比例較小，比較精緻 */
+  text-transform: uppercase;       /* 增加一點專業感 */
+}
+
+/* 2. 修正 TOC 的 Highlight 顏色 (把討厭的藍色換掉) */
+html:not([data-mode]), html[data-mode='light'] {
+  --toc-highlight: #ffb6c1 !important; /* 選中時的粉紅線 */
+}
+
+/* 3. 讓 TOC 的導引線在滑動時更明顯 */
+#toc {
+  border-left: 1px solid #eeeeee !important; /* 預設的淺灰細線 */
+}
+
+/* 4. 保留原版的 ps-3 (這就是對齊文章摘要的關鍵) */
+/* 如果你之前刪掉了，現在它會自動恢復。Chirpy 預設就是用 ps-3 來對齊 TOC 的線 */

@@ -204,7 +204,7 @@ hr {
 /* 2. 微調 TOC 容器的起始位置，使其與上方區塊的垂直線對齊 */
 /* 註：如果覺得太靠左，可以把 0 改成 0.5rem 或 1rem */
 #toc-wrapper {
-  padding-left: 0 !important; 
+  padding-left: 1 !important; 
 }
 
 /* 3. 確保 TOC 清單縮排正常 */

@@ -83,6 +83,7 @@ h3 {
 /* 連結 */
 a {
   color: #9E7A7A;
+  font-weight: 700 !important; /* 700 是標準粗體，600 是中粗 */
 }
 
 /* 強效版：針對所有模式下的連結懸停效果 */
@@ -167,10 +168,4 @@ html:not([data-mode]), html[data-mode='light'] {
 #archives ul li:nth-child(odd) {
     background-image: none !important; /* 徹底移除圖片/漸層 */
     background-color: transparent !important; /* 或是設定為透明，跟隨大背景 */
-}
-
-#archives ul li {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  border-bottom: 1px dashed #ffe4e1 !important; /* 加上粉色虛線分隔 */
 }

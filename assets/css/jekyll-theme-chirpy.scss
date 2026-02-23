@@ -191,13 +191,29 @@ hr {
   opacity: 1;
 }
 
+/* ==========================================================================
+   僅修正 TOC (文章摘要) 的對齊
+   ========================================================================== */
+
+/* 1. 移除 TOC 標題內建的 ps-3 偏移 */
+#toc-wrapper .panel-heading {
+  padding-left: 0 !important; 
+  margin-left: 0 !important;
+}
+
+/* 2. 微調 TOC 容器的起始位置，使其與上方區塊的垂直線對齊 */
+/* 註：如果覺得太靠左，可以把 0 改成 0.5rem 或 1rem */
+#toc-wrapper {
+  padding-left: 0 !important; 
+}
+
+/* 3. 確保 TOC 清單縮排正常 */
+#toc {
+  margin-left: 0 !important;
+  padding-left: 1rem !important;
+}
+
+
 #toc-wrapper::before, .toc-border-cover {
-    content: "";
-    display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 3rem;
     background: none !important;
 }

@@ -1,6 +1,11 @@
 ---
 ---
 
+/*
+ * Chirpy 粉紅科技風格自定義樣式 (WenTech Pink Theme)
+ * 整理日期：2026-02-24
+ */
+
 /* prettier-ignore */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
@@ -8,43 +13,32 @@
 {%- endif -%}
 ';
 
-/* append your custom style below */
+/* ==========================================================================
+   1. 全域變數與基礎佈局 (Global & Layout)
+   ========================================================================== */
 
-/* ===== 可愛粉色模式 ===== */
-/* 主背景 */
-body, footer {
+/* 核心變數代換 (優先消滅藍色) */
+html:not([data-mode]), 
+html[data-mode='light'] {
+  --link-color: #ff69b4 !important;            /* 全域連結粉紅化 */
+  --link-underline-color: #ffc0cb !important;
+  --toc-highlight: #809D9C !important;         /* TOC 選中顏色 */
+}
+
+/* 整體背景與字體 */
+body, #topbar-wrapper, footer {
   background-color: #fff8fb !important;
   font-family: "Nunito", "Helvetica Neue", sans-serif;
 }
 
-/* Topbar 背景 */
-#topbar-wrapper {
-  background-color: #fff8fb !important;
-}
-
-/* Sidebar 背景 */
-#sidebar {
-  background-color: #ffeef6 !important;
-}
-
-/* 移除 footer 上方那條線 */
 footer {
-  border-top: none !important;
+  border-top: none !important; /* 移除 footer 上方分隔線 */
 }
 
-/* 文章卡片 */
-.card {
-  border-radius: 18px;
-  background-color: #ffffff !important;
-  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
-}
+/* ==========================================================================
+   2. 文章標題樣式 (Headings)
+   ========================================================================== */
 
-#post-list .card .card-body .card-title {
-color: #C4828E !important;
-font-size: 1.5rem !important;
-}
-
-/* 標題 */
 /* H1: 文章主標題 */
 h1 {
   font-size: 1.8rem !important; 
@@ -53,11 +47,11 @@ h1 {
   margin-bottom: 1.5rem !important;
 }
 
-/* H2: 大段落標題 (增加粉色側邊條) */
+/* H2: 大段落標題 (帶粉色左側邊條) */
 .content h2 {
   font-size: 1.5rem !important;
   color: #D487A2 !important; 
-  border-left: 6px solid #ffb6c1 !important; /* 側邊條 */
+  border-left: 6px solid #ffb6c1 !important; 
   padding-left: 12px !important;
   margin-top: 2.5rem !important;
   margin-bottom: 1.2rem !important;
@@ -65,7 +59,7 @@ h1 {
   border-bottom: none !important;
 }
 
-/* H3: 小子題 */
+/* H3: 小子題 (清爽青粉色) */
 h3 {
   font-size: 1.2rem !important;
   color: #809D9C !important;
@@ -74,156 +68,163 @@ h3 {
   font-weight: 600 !important;
 }
 
-/* 按鈕 */
+/* ==========================================================================
+   3. 內容元件 (Cards, Tags, HR)
+   ========================================================================== */
+
+/* 文章列表卡片 */
+.card {
+  border-radius: 18px;
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.15);
+}
+
+#post-list .card .card-body .card-title {
+  color: #C4828E !important;
+  font-size: 1.5rem !important;
+}
+
+/* Markdown 分隔線 (虛線樣式) */
+hr {
+  border-color: #ffc0cb !important;
+  border-top: 2px dashed #ffc0cb !important;
+  opacity: 1;
+}
+
+/* 文章標籤 (Tags) */
+.post-tag {
+  background-color: #fff0f5 !important;
+  border: 1px solid #ffc0cb !important;
+  padding: 4px 12px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.post-tag:hover {
+  background-color: #FFEBF1 !important;
+  border: 1px solid #ffc0cb !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. 連結與按鈕 (Links & Buttons)
+   ========================================================================== */
+
+/* 全域連結文字 */
+a {
+  color: #C4828E;
+  font-weight: 700 !important;
+}
+
+/* 全域連結滑過效果 (含深粉色變換) */
+html:not([data-mode]) #main-wrapper a:hover, 
+html[data-mode="light"] #main-wrapper a:hover,
+html[data-mode="dark"] #main-wrapper a:hover {
+  color: #E87A90 !important;
+  transition: color 0.2s ease-in-out;
+  border-bottom-color: #E87A90 !important;
+}
+
+/* 按鈕樣式 */
 .btn-primary {
   background-color: #ff7aa2 !important;
   border-color: #ff7aa2 !important;
 }
 
-/* 連結 */
-a {
-  color: #C4828E;
-  font-weight: 700 !important; /* 700 是標準粗體，600 是中粗 */
+.btn.btn-outline-primary:not(.disabled):hover {
+  border-color: #ffc0cb !important;
 }
 
-/* 強效版：針對所有模式下的連結懸停效果 */
-html:not([data-mode]) #main-wrapper a:hover, 
-html[data-mode="light"] #main-wrapper a:hover,
-html[data-mode="dark"] #main-wrapper a:hover {
-  color: #E87A90 !important;
-  transition: color 0.2s ease-in-out;   /* 增加平滑過渡感 */
-  border-bottom-color: #E87A90 !important; /* 針對 Chirpy 文章內的連結底線變色 */
+/* ==========================================================================
+   5. 左側導覽列 (Sidebar)
+   ========================================================================== */
+
+#sidebar {
+  background-color: #ffeef6 !important;
 }
 
-html:not([data-mode]), html[data-mode='light'] {
-  /* 把這台車的「預設油漆」直接換成粉紅色 */
-  --link-color: #ff69b4 !important; 
-  --link-underline-color: #ffc0cb !important;
+/* 網站名稱 (Site Title) 動態效果 */
+#sidebar .site-title {
+  display: inline-block;
+  transition: all 0.3s ease-in-out !important;
 }
 
-/* ===== 強制覆蓋 Sidebar Hover ===== */
+#sidebar .site-title:hover {
+  color: #DC9FB4 !important; 
+  text-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+  transform: scale(1.08) rotate(-2deg);
+  text-decoration: none !important;
+}
 
-/* Sidebar 項目 hover */
+/* Sidebar 選單項目 Hover & Active */
 #sidebar .nav-link:hover,
 #sidebar ul li.nav-item.active .nav-link {
   background-color: rgba(255, 122, 162, 0.2) !important;
-  color: #d63384 !important;
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
 }
 
-/* 當選單被選中或滑鼠移上去時的文字顏色 */
+/* 選單文字與圖示變色 */
 #sidebar .nav-item.active a.nav-link span,
-#sidebar .nav-item a.nav-link:hover span {
-  color: #D05A6E !important; /* 選中時文字變白色 */
-}
-
-/* 左邊小 icon 也變色 */
+#sidebar .nav-item a.nav-link:hover span,
 #sidebar .nav-link:hover i,
 #sidebar .nav-item.active a.nav-link i {
   color: #D05A6E !important;
 }
 
-/* 網站名稱 basic */
-#sidebar .site-title {
-  transition: all 0.3s ease-in-out !important; /* 讓所有變化在 0.3 秒內平滑完成 */
-  display: inline-block; /* 必須加上這行，transform 縮放效果才會生效 */
-}
-
-/* 網站名稱 Hover */
-#sidebar .site-title:hover {
-  color: #DC9FB4 !important; 
-  text-shadow: 0 0 12px rgba(255, 105, 180, 0.4); /* 增加一層柔和粉紅光暈 */
-  transform: scale(1.08) rotate(-2deg); /* 稍微放大並傾斜 2 度，增加俏皮感 */
-  text-decoration: none !important;    /* 確保不會出現底線 */
-}
-
-/* --- 文章標籤基本樣式 --- */
-.post-tag {
-  background-color: #fff0f5 !important; /* 極淺的薰衣草粉底色 */
-  border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
-  padding: 4px 12px !important;        /* 讓標籤胖一點，比較可愛 */
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important; /* 平滑變色效果 */
-}
-
-/* --- 標籤滑鼠懸停 (Hover) 樣式 --- */
-.post-tag:hover {
-  background-color: #FFEBF1 !important; /* 懸停時底色變深 */
-  border: 1px solid #ffc0cb !important; /* 粉紅色的細邊框 */
-  text-decoration: none !important;    /* 移除懸停底線 */
-  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important; /* 增加淡淡的粉紅光暈 */
-  transform: translateY(-2px);         /* 輕微往上跳一下 */
-}
-
-/* Overwrite bootstrap outline button */
-.btn.btn-outline-primary {
-  &:not(.disabled):hover {
-    border-color: #ffc0cb !important;
-  }
-}
-
-/* 存檔頁面*/
-/* 移除存檔頁面奇數列的背景漸層 */
-#archives ul li:nth-child(odd) {
-    background-image: none !important; /* 徹底移除圖片/漸層 */
-    background-color: transparent !important; /* 或是設定為透明，跟隨大背景 */
-}
-
-/* 專門針對存檔頁面 (Archives) 列表中的連結 */
-#archives ul li a {
-  color: #d87093 !important;      /* 漂亮的深粉色 */
-  font-weight: 700 !important;     /* 加上你想要的粗體 */
-  transition: color 0.2s ease;     /* 讓顏色切換更平滑 */
-  text-decoration: none !important; /* 移除預設底線 */
-}
-
-/* 存檔連結滑鼠懸停 (Hover) 效果 */
-#archives ul li a:hover {
-  color: #ff69b4 !important;       /* 懸停時變更亮眼的粉紅 */
-  text-decoration: underline !important; /* 懸停時才出現底線 */
-}
-
-/* 修改 Markdown 分隔線樣式 (hr) */
-hr {
-  border-color: #ffc0cb !important;
-  border-top: 2px dashed #ffc0cb !important; /* 虛線 */
-  opacity: 1;
-}
-
 /* ==========================================================================
-   回歸 Chirpy 原生排版 (側欄專用)
+   6. 右側面板與文章摘要 (Panel & TOC)
    ========================================================================== */
 
-/* 1. 讓側欄標題回歸原版間距，僅修改顏色與粗體 */
+/* 側欄標題 (最近更新、熱門標籤、文章摘要) */
 #panel-wrapper .panel-heading {
-  color: #C4828E !important;      /* 粉紅文字 */
-  background-color: transparent !important; /* 移除底色塊，回歸簡約 */
-  border: none !important;         /* 移除邊框 */
+  color: #C4828E !important;
+  background-color: transparent !important;
+  border: none !important;
   font-weight: 700 !important;
-  font-size: 0.85rem !important;   /* 原版比例較小，比較精緻 */
-  text-transform: uppercase;       /* 增加一點專業感 */
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
 }
 
-/* 2. 修正 TOC 的 Highlight 顏色 (把討厭的藍色換掉) */
-html:not([data-mode]), html[data-mode='light'] {
-  --toc-highlight: #809D9C !important; /* 選中時的粉紅線 */
+/* 側欄區塊左側細線 */
+.access > section {
+  border-left: 1px solid #ffeef6 !important;
+}
+
+/* TOC (文章摘要) 清單與導引線 */
+#toc {
+  border-left: 1px solid #ffeef6 !important;
 }
 
 a.toc-link {
-    color: #757575  !important;
+  color: #757575 !important;
 }
 
-/* 3. 讓 TOC 的導引線在滑動時更明顯 */
-#toc {
-  border-left: 1px solid #ffeef6 !important; /* 預設的淺灰細線 */
-}
-
+/* 遮蓋 TOC 上方的過渡背景 (設為與 Body 相同) */
 #toc-wrapper::before, .toc-border-cover {
   background: #fff8fb !important;
 }
 
-/* 將右側欄區塊（最近更新、熱門標籤）左側的直線改為粉紅色 */
-.access > section {
-  border-left: 1px solid #ffeef6 !important; /* 這裡可以換成你喜歡的粉色，例如 #ffb6c1 或 #D487A2 */
+/* ==========================================================================
+   7. 專用頁面樣式 (Page Specific)
+   ========================================================================== */
+
+/* 存檔頁面 (Archives) */
+#archives ul li:nth-child(odd) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+#archives ul li a {
+  color: #d87093 !important;
+  font-weight: 700 !important;
+  transition: color 0.2s ease;
+  text-decoration: none !important;
+}
+
+#archives ul li a:hover {
+  color: #ff69b4 !important;
+  text-decoration: underline !important;
 }

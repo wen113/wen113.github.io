@@ -202,6 +202,15 @@ hr {
   border: none !important;         /* 移除邊框 */
   font-weight: 700 !important;
   font-size: 0.85rem !important;   /* 原版比例較小，比較精緻 */
+  text-transform: uppercase;       /* 增加一點專業感 */
+}
+
+.panel-heading ps-3 pb-2 mb-0 {
+  color: #D487A2 !important;      /* 粉紅文字 */
+  background-color: transparent !important; /* 移除底色塊，回歸簡約 */
+  border: none !important;         /* 移除邊框 */
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;   /* 原版比例較小，比較精緻 */
   margin-left: 0px !important; 
   padding-left: 12 !important; /* 同時確保內距歸零 */
   text-transform: uppercase;       /* 增加一點專業感 */

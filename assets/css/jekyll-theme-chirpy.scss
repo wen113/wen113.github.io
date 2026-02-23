@@ -217,9 +217,14 @@ hr {
    ========================================================================== */
 
 /* 1. 移除側欄左側的線條 */
-#toc-wrapper > *, 
+#toc-wrapper, 
+#toc,
 .access > section {
   border-left: none !important;
+}
+
+#panel-wrapper .panel-heading {
+  border-left: 4px solid #ffb6c1 !important; /* 側欄書籤樣式 */
 }
 
 /* 2. & 3. 移除 TOC 標題與側欄特定區塊的 Bootstrap 縮排 (ps-3, pb-2) */
@@ -235,12 +240,12 @@ hr {
 /* 4. 徹底消滅 TOC 的藍色高亮變數 (將藍色換成你的粉紅色) */
 html:not([data-mode]), 
 html[data-mode='light'] {
-  --toc-highlight: #ff69b4 !important; /* 把原本的 #0550ae 換成熱情粉紅 */
+  --toc-highlight: none !important; /* 把原本的 #0550ae 換成熱情粉紅 */
 }
 
 /* 如果連 Dark Mode 也要一併改掉，可以補上這段 */
 @media (prefers-color-scheme: dark) {
   html[data-mode='light'] {
-    --toc-highlight: #ff69b4 !important;
+    --toc-highlight: none !important;
   }
 }

@@ -187,65 +187,6 @@ html:not([data-mode]), html[data-mode='light'] {
 /* 修改 Markdown 分隔線樣式 (hr) */
 hr {
   border-color: #ffc0cb !important;
-  border-top: 2px dashed !important; /* 虛線 */
+  border-top: 2px dashed #ffc0cb !important; /* 虛線 */
   opacity: 1;
-}
-
-/* ==========================================================================
-   僅修正 TOC (文章摘要) 的對齊
-   ========================================================================== */
-
-/* 2. 微調 TOC 容器的起始位置，使其與上方區塊的垂直線對齊 */
-/* 註：如果覺得太靠左，可以把 0 改成 0.5rem 或 1rem */
-#toc-wrapper {
-  padding-left: 1rem !important;
-}
-
-/* 3. 確保 TOC 清單縮排正常 */
-#toc {
-  margin-left: 0 !important;
-  padding-left: 1rem !important;
-}
-
-
-#toc-wrapper::before, .toc-border-cover {
-    background: none !important;
-}
-
-/* ==========================================================================
-   CSS 大掃除：移除不需要的邊框、縮排與藍色變數
-   ========================================================================== */
-
-/* 1. 移除側欄左側的線條 */
-#toc-wrapper, 
-#toc,
-.access > section {
-  border-left: none !important;
-}
-
-#panel-wrapper .panel-heading {
-  border-left: 4px solid #ffb6c1 !important; /* 側欄書籤樣式 */
-}
-
-/* 2. & 3. 移除 TOC 標題與側欄特定區塊的 Bootstrap 縮排 (ps-3, pb-2) */
-/* 我們精確定位在側欄，避免影響到全站其他地方的 Bootstrap 排版 */
-#panel-wrapper .ps-3 {
-  padding-left: 0 !important;
-}
-
-#panel-wrapper .pb-2 {
-  padding-bottom: 0 !important;
-}
-
-/* 4. 徹底消滅 TOC 的藍色高亮變數 (將藍色換成你的粉紅色) */
-html:not([data-mode]), 
-html[data-mode='light'] {
-  --toc-highlight: none !important; /* 把原本的 #0550ae 換成熱情粉紅 */
-}
-
-/* 如果連 Dark Mode 也要一併改掉，可以補上這段 */
-@media (prefers-color-scheme: dark) {
-  html[data-mode='light'] {
-    --toc-highlight: none !important;
-  }
 }

@@ -202,7 +202,8 @@ hr {
   border: none !important;         /* 移除邊框 */
   font-weight: 700 !important;
   font-size: 0.85rem !important;   /* 原版比例較小，比較精緻 */
-  padding-left: -12px !important;
+  margin-left: -12px !important; 
+  padding-left: 0 !important; /* 同時確保內距歸零 */
   text-transform: uppercase;       /* 增加一點專業感 */
 }
 
@@ -213,7 +214,7 @@ html:not([data-mode]), html[data-mode='light'] {
 
 /* 3. 讓 TOC 的導引線在滑動時更明顯 */
 #toc {
-  border-left: 1px solid #eeeeee !important; /* 預設的淺灰細線 */
+  border-left: 1px solid #ffeef6 !important; /* 預設的淺灰細線 */
 }
 
 #toc-wrapper::before, .toc-border-cover {

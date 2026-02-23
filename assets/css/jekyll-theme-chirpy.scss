@@ -210,6 +210,10 @@ html:not([data-mode]), html[data-mode='light'] {
   --toc-highlight: #ffb6c1 !important; /* 選中時的粉紅線 */
 }
 
+a.toc-link {
+    color: #809D9C  !important;
+}
+
 /* 3. 讓 TOC 的導引線在滑動時更明顯 */
 #toc {
   border-left: 1px solid #ffeef6 !important; /* 預設的淺灰細線 */

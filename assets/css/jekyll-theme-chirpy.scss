@@ -15,16 +15,9 @@
 ';
 
 /* ==========================================================================
-   全站通用 Banner (Homepage, Posts, Pages, Archives, etc.)
+   首頁 Banner
    ========================================================================== */
-
-/* 鎖定 Chirpy 所有主要的內容容器 */
-#post-list::before,      /* 首頁文章列表 */
-#post-wrapper::before,   /* 文章內容頁 */
-#page-wrapper::before,   /* 自定義頁面 (如: 關於我) */
-#archives::before,       /* 存檔頁 */
-#categories::before,     /* 分類頁 */
-#tags::before {          /* 標籤頁 */
+#post-list::before {
   content: "";
   display: block;
   width: 100%;

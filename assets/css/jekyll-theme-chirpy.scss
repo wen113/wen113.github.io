@@ -101,7 +101,7 @@ html[data-mode="dark"] #main-wrapper a:hover {
   border-bottom-color: #DC9FB4 !important;
 }
 
-/* 標題系統 (統一粉色調與權重) */
+/* 標題系統 */
 h1, h2, h3, h4, h5, .card-title, header .post-desc {
   font-weight: 700 !important;
 }
@@ -137,6 +137,10 @@ h4 {
   padding-bottom: 3px !important;
   margin-top: 2rem !important;
   font-weight: 600 !important;
+}
+
+header .post-desc {
+    color: #656765 !important;
 }
 
 /* ==========================================================================

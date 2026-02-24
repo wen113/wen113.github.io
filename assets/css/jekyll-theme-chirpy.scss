@@ -139,6 +139,28 @@ html[data-mode="dark"] #main-wrapper a:hover {
   border-color: #ffc0cb !important;
 }
 
+/* 文章底部分享圖示與複製連結按鈕 Hover */
+.share-icons a:hover i,
+.share-icons button:hover i {
+  color: #DC9FB4 !important;
+  transition: color 0.2s ease-in-out;
+}
+
+/* 針對「複製連結」按鈕背景的微調 */
+.share-icons button#copy-link:hover {
+  background-color: rgba(255, 122, 162, 0.1) !important; /* 淡淡的粉紅底色 */
+  color: #E87A90 !important;
+}
+
+/* 修正 Tooltip (提示文字) 的顏色 (如果有需要的話) */
+.tooltip-inner {
+  background-color: #D487A2 !important; /* 讓提示小方塊也變粉紅 */
+}
+.bs-tooltip-top .assistive-color, 
+.bs-tooltip-auto[data-popper-placement^=top] .assistive-color {
+  border-top-color: #D487A2 !important;
+}
+
 /* ==========================================================================
    5. 左側導覽列 (Sidebar)
    ========================================================================== */

@@ -22,20 +22,19 @@
   display: block;
   width: 100%;
   
-  /* 建議使用比例縮放，或者固定高度 */
-  height: 250px; 
+  /* 根據你圖片的比例設定 (寬 / 高) */
+  /* 例如你的圖片是 1080x350，比例大約是 3 / 1 */
+  aspect-ratio: 3 / 1; 
+  height: auto; /* 讓高度根據比例自動計算 */
   
-  /* 圖片路徑：請確認你的檔案位於 assets/img/posts/04_1080.jpg */
-  background-image: url('/assets/img/posts/2026-02-24/WenTech_Banner.png') !important; 
-  background-size: cover;
+  background-image: url('/assets/img/posts/04_1080.jpg') !important;
+  background-size: cover; /* 這時候用 cover 也不會被剪，因為比例是一樣的 */
   background-position: center;
-  background-repeat: no-repeat;
   
-  /* 可愛裝飾 */
-  border-radius: 25px;
-  margin-bottom: 2.5rem;
-  border: 5px solid #ffffff; /* 白色邊框 */
-  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2);
 }
 
 /* 行動裝置適應 */

@@ -143,6 +143,7 @@ html[data-mode="dark"] #main-wrapper a:hover {
 .share-icons a:hover i,
 .share-icons button:hover i {
   color: #DC9FB4 !important;
+  background-color: transparent !important; /* 強制背景保持透明，不出現方塊 */
   transition: color 0.2s ease-in-out;
 }
 
@@ -153,6 +154,18 @@ html[data-mode="dark"] #main-wrapper a:hover {
 .bs-tooltip-top .assistive-color, 
 .bs-tooltip-auto[data-popper-placement^=top] .assistive-color {
   border-top-color: #C4828E !important;
+}
+
+/* 2. 針對「複製連結」按鈕的特殊處理 (移除預設背景與陰影) */
+#copy-link:hover {
+  background-color: transparent !important;
+  box-shadow: none !important; /* 移除點擊或滑過時的藍色/灰色陰影 */
+}
+
+/* 3. 移除 Bootstrap 可能產生的外框線 */
+.share-icons a, .share-icons button {
+  text-decoration: none !important;
+  outline: none !important;
 }
 
 /* ==========================================================================

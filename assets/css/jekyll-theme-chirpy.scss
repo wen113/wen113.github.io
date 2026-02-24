@@ -17,28 +17,30 @@
 /* ==========================================================================
    首頁專屬 Banner (Homepage Banner)
    ========================================================================== */
-
-/* 僅在首頁 (#post-list 存在時) 插入 Banner */
-#main-wrapper:has(#post-list)::before {
+#post-list::before {
   content: "";
   display: block;
   width: 100%;
-  height: 350px;                 /* 你可以根據圖片比例調整高度 */
-  background-image: url('/assets/img/posts/2026-02-24/WenTech_Banner.png'); /* 確保圖片路徑正確 */
-  background-size: cover;        /* 讓圖片充滿整個區塊 */
-  background-position: center;   /* 圖片居中對齊 */
+  
+  /* 建議使用比例縮放，或者固定高度 */
+  height: 350px; 
+  
+  /* 圖片路徑：請確認你的檔案位於 assets/img/posts/04_1080.jpg */
+  background-image: url('/assets/img/posts/04_1080.jpg') !important; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   
-  /* 粉紅風格裝飾 */
-  border-radius: 25px;           /* 圓角效果，跟你的卡片風格統一 */
-  margin-bottom: 2.5rem;         /* Banner 與下方文章列表的間距 */
-  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.25); /* 柔和的粉紅陰影 */
-  border: 4px solid #ffffff;     /* 白色邊框，增加拍立得感 */
+  /* 可愛裝飾 */
+  border-radius: 25px;
+  margin-bottom: 2.5rem;
+  border: 5px solid #ffffff; /* 白色邊框 */
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
 }
 
-/* 針對行動裝置 (手機) 調整高度，避免 Banner 太長 */
-@media (max-width: 576px) {
-  #main-wrapper:has(#post-list)::before {
+/* 行動裝置適應 */
+@media (max-width: 768px) {
+  #post-list::before {
     height: 200px;
     border-radius: 15px;
     margin-bottom: 1.5rem;

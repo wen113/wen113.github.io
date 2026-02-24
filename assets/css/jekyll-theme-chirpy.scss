@@ -74,11 +74,11 @@ html[data-mode="dark"] #main-wrapper a:hover {
 /* 標題系統 (統一粉色調與權重) */
 h1, h2, h3, h4, h5, .card-title, header .post-desc {
   font-weight: 700 !important;
-  color: #C4828E !important;
 }
 
 h1 {
   font-size: 1.5rem !important; 
+  color: #C4828E !important;
   margin-bottom: 1.5rem !important;
   font-weight: 800 !important; /* 主標題最厚 */
 }

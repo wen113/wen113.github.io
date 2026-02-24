@@ -146,19 +146,13 @@ html[data-mode="dark"] #main-wrapper a:hover {
   transition: color 0.2s ease-in-out;
 }
 
-/* 針對「複製連結」按鈕背景的微調 */
-.share-icons button#copy-link:hover {
-  background-color: rgba(255, 122, 162, 0.1) !important; /* 淡淡的粉紅底色 */
-  color: #E87A90 !important;
-}
-
 /* 修正 Tooltip (提示文字) 的顏色 (如果有需要的話) */
 .tooltip-inner {
-  background-color: #D487A2 !important; /* 讓提示小方塊也變粉紅 */
+  background-color: #C4828E !important; /* 讓提示小方塊也變粉紅 */
 }
 .bs-tooltip-top .assistive-color, 
 .bs-tooltip-auto[data-popper-placement^=top] .assistive-color {
-  border-top-color: #D487A2 !important;
+  border-top-color: #C4828E !important;
 }
 
 /* ==========================================================================

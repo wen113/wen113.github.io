@@ -21,14 +21,12 @@
   content: "";
   display: block;
   width: 100%;
-  
-  /* 根據你圖片的比例設定 (寬 / 高) */
-  /* 例如你的圖片是 1080x350，比例大約是 3 / 1 */
+  /* 例如圖片是 1080x350，比例大約是 3 / 1 */
   aspect-ratio: 3 / 1; 
-  height: auto; /* 讓高度根據比例自動計算 */
+  height: auto; /* 根據比例自動計算 */
   
   background-image: url('/assets/img/posts/2026-02-24/WenTech_Banner.png') !important;
-  background-size: cover; /* 這時候用 cover 也不會被剪，因為比例是一樣的 */
+  background-size: cover;
   background-position: center;
   
   border-radius: 20px;
@@ -58,7 +56,7 @@
 html:not([data-mode]), 
 html[data-mode='light'] {
   --text-color: #656765 !important;            /* 全站預設文字顏色 */
-  --link-color: #C4828E !important;            /* 全域連結粉紅化 */
+  --link-color: #C4828E !important;            /* 全站預設連結顏色 */
   --link-underline-color: #ffc0cb !important;
   --toc-highlight: #809D9C !important;         /* TOC 目前閱讀位置顏色 */
 }
@@ -112,7 +110,7 @@ h1 {
   font-size: 1.5rem !important; 
   color: #C4828E !important;
   margin-bottom: 1.5rem !important;
-  font-weight: 800 !important; /* 主標題最厚 */
+  font-weight: 800 !important;
 }
 
 .content h2 {

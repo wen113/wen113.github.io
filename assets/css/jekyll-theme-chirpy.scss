@@ -141,9 +141,7 @@ html[data-mode="dark"] #main-wrapper a:hover {
 
 /* 文章底部分享圖示與複製連結按鈕 Hover */
 .post-tail-wrapper .share-wrapper .share-icons>*:hover i {
-  color: #DC9FB4 !important;
-  background-color: transparent !important; /* 強制背景保持透明，不出現方塊 */
-  transition: color 0.2s ease-in-out;
+    color: #DC9FB4 !important;
 }
 
 /* 修正 Tooltip (提示文字) 的顏色 (如果有需要的話) */

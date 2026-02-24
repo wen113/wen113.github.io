@@ -23,7 +23,7 @@
 /* 核心變數代換 (優先消滅藍色) */
 html:not([data-mode]), 
 html[data-mode='light'] {
-  --text-color: #434343 !important;            /* 修改全站預設文字顏色 */
+  --text-color: #656765 !important;            /* 修改全站預設文字顏色 */
   --link-color: #ff69b4 !important;            /* 全域連結粉紅化 */
   --link-underline-color: #ffc0cb !important;
   --toc-highlight: #809D9C !important;         /* TOC 選中顏色 */
@@ -258,7 +258,7 @@ a.toc-link {
 }
 
 #archives ul li a {
-  color: #434343 !important;
+  color: #656765 !important;
   font-weight: 700 !important;
   transition: color 0.2s ease;
   text-decoration: none !important;

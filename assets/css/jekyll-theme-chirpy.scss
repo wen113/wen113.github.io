@@ -4,6 +4,7 @@
 /*
  * Chirpy 粉紅科技風格自定義樣式 (WenTech Pink Theme)
  * 整理日期：2026-02-24
+ * 更新內容：統整字體邏輯、優化選擇器權重、去藍化徹底執行
  */
 
 /* prettier-ignore */
@@ -13,23 +14,34 @@
 {%- endif -%}
 ';
 
-/* 導入加重版可愛字體：Fredoka (英文) 與 Zen Maru Gothic (中日文) */
+/* ==========================================================================
+   1. 外部資源導入 (Fonts) 
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
 
 /* ==========================================================================
-   1. 全域變數與基礎佈局 (Global & Layout)
+   2. 全域變數與主題配置 (Variables & Global)
    ========================================================================== */
 
-/* 核心變數代換 (優先消滅藍色) */
 html:not([data-mode]), 
 html[data-mode='light'] {
-  --text-color: #656765 !important;            /* 修改全站預設文字顏色 */
+  --text-color: #656765 !important;            /* 全站預設文字顏色 */
   --link-color: #ff69b4 !important;            /* 全域連結粉紅化 */
   --link-underline-color: #ffc0cb !important;
-  --toc-highlight: #809D9C !important;         /* TOC 選中顏色 */
+  --toc-highlight: #809D9C !important;         /* TOC 目前閱讀位置顏色 */
 }
 
-/* 統一字體：將所有文字容器、標題、搜尋結果等都納入可愛圓潤字體 */
+/* 全域基礎排版 */
+body, 
+#topbar-wrapper, 
+footer {
+  background-color: #fff8fb !important;
+  font-weight: 500 !important;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.02rem;
+}
+
+/* 統一字體族群 (涵蓋所有可能缺漏的區塊) */
 body, 
 #topbar-wrapper, 
 footer,
@@ -37,43 +49,40 @@ header .post-desc,
 #toc-bar .label, 
 #search-results a, 
 h1, h2, h3, h4, h5, .card-title {
-  /* 優先使用 Fredoka 處理英數，Zen Maru Gothic 處理中文，備援使用系統黑體 */
   font-family: "Fredoka", "Zen Maru Gothic", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif !important;
-  -webkit-font-smoothing: antialiased; /* 文字平滑處理 */
-  letter-spacing: 0.02rem;             /* 增加文字呼吸感 */
-}
-
-/* 基礎佈局：設定背景、預設字重與文字顏色 */
-body, 
-#topbar-wrapper, 
-footer {
-  background-color: #fff8fb !important;
-  font-weight: 500 !important;         /* 基礎文字厚度，解決太細的問題 */
-}
-
-/* 標題與重要元件加強：強制更胖 (700) 並套用粉嫩色 */
-h1, h2, h3, h4, h5, .card-title, header .post-desc {
-  font-weight: 700 !important;
-}
-
-/* 移除頁尾多餘線條 */
-footer {
-  border-top: none !important;
 }
 
 /* ==========================================================================
-   2. 文章標題樣式 (Headings)
+   3. 文字系統與標題 (Typography)
    ========================================================================== */
 
-/* H1: 文章主標題 */
-h1 {
-  font-size: 1.5rem !important; 
-  color: #C4828E !important;
-  font-weight: 800 !important;
-  margin-bottom: 1.5rem !important;
+/* 全域連結樣式 */
+a {
+  color: #C4828E;
+  font-weight: 700 !important;
 }
 
-/* H2: 大段落標題 (帶粉色左側邊條) */
+/* 連結 Hover 效果 */
+html:not([data-mode]) #main-wrapper a:hover, 
+html[data-mode="light"] #main-wrapper a:hover,
+html[data-mode="dark"] #main-wrapper a:hover {
+  color: #DC9FB4 !important;
+  transition: color 0.2s ease-in-out;
+  border-bottom-color: #DC9FB4 !important;
+}
+
+/* 標題系統 (統一粉色調與權重) */
+h1, h2, h3, h4, h5, .card-title, header .post-desc {
+  font-weight: 700 !important;
+  color: #C4828E !important;
+}
+
+h1 {
+  font-size: 1.5rem !important; 
+  margin-bottom: 1.5rem !important;
+  font-weight: 800 !important; /* 主標題最厚 */
+}
+
 .content h2 {
   font-size: 1.3rem !important;
   color: #D487A2 !important; 
@@ -81,11 +90,9 @@ h1 {
   padding-left: 12px !important;
   margin-top: 2.5rem !important;
   margin-bottom: 1.2rem !important;
-  font-weight: 700 !important;
   border-bottom: none !important;
 }
 
-/* H3: 小子題 (清爽青粉色) */
 h3 {
   font-size: 1.2rem !important;
   color: #809D9C !important;
@@ -95,10 +102,10 @@ h3 {
 }
 
 /* ==========================================================================
-   3. 內容元件 (Cards, Tags, HR)
+   4. UI 元件 (Cards, Tags, Buttons, Share)
    ========================================================================== */
 
-/* 文章列表卡片 */
+/* 文章卡片 */
 .card {
   border-radius: 18px;
   background-color: #ffffff !important;
@@ -106,18 +113,10 @@ h3 {
 }
 
 #post-list .card .card-body .card-title {
-  color: #C4828E !important;
   font-size: 1.5rem !important;
 }
 
-/* Markdown 分隔線 (虛線樣式) */
-hr {
-  border-color: #ffc0cb !important;
-  border-top: 2px dashed #ffc0cb !important;
-  opacity: 1;
-}
-
-/* 文章標籤 (Tags) */
+/* 文章標籤 */
 .post-tag {
   background-color: #fff0f5 !important;
   border: 1px solid #ffc0cb !important;
@@ -128,32 +127,12 @@ hr {
 
 .post-tag:hover {
   background-color: #FFEBF1 !important;
-  border: 1px solid #ffc0cb !important;
-  text-decoration: none !important;
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4) !important;
   transform: translateY(-2px);
+  text-decoration: none !important;
 }
 
-/* ==========================================================================
-   4. 連結與按鈕 (Links & Buttons)
-   ========================================================================== */
-
-/* 全域連結文字 */
-a {
-  color: #C4828E;
-  font-weight: 700 !important;
-}
-
-/* 全域連結滑過效果 (含深粉色變換) */
-html:not([data-mode]) #main-wrapper a:hover, 
-html[data-mode="light"] #main-wrapper a:hover,
-html[data-mode="dark"] #main-wrapper a:hover {
-  color: #DC9FB4 !important;
-  transition: color 0.2s ease-in-out;
-  border-bottom-color: #DC9FB4 !important;
-}
-
-/* 按鈕樣式 */
+/* 按鈕類 */
 .btn-primary {
   background-color: #ff7aa2 !important;
   border-color: #ff7aa2 !important;
@@ -163,29 +142,36 @@ html[data-mode="dark"] #main-wrapper a:hover {
   border-color: #ffc0cb !important;
 }
 
-/* 文章底部分享圖示與複製連結按鈕 Hover */
-.post-tail-wrapper .share-wrapper .share-icons>*:hover i {
-    color: #DC9FB4 !important;
+/* 分享圖示與 Tooltip */
+.post-tail-wrapper .share-wrapper .share-icons > *:hover i {
+  color: #DC9FB4 !important;
 }
 
-/* 修正 Tooltip (提示文字) 的顏色 (如果有需要的話) */
 .tooltip-inner {
-  background-color: #C4828E !important; /* 讓提示小方塊也變粉紅 */
+  background-color: #C4828E !important;
 }
+
 .bs-tooltip-top .assistive-color, 
 .bs-tooltip-auto[data-popper-placement^=top] .assistive-color {
   border-top-color: #C4828E !important;
 }
 
+/* 分隔線 */
+hr {
+  border-color: #ffc0cb !important;
+  border-top: 2px dashed #ffc0cb !important;
+  opacity: 1;
+}
+
 /* ==========================================================================
-   5. 左側導覽列 (Sidebar)
+   5. 側邊欄與導覽 (Sidebar)
    ========================================================================== */
 
 #sidebar {
   background-color: #ffeef6 !important;
 }
 
-/* 網站名稱 (Site Title) 動態效果 */
+/* 網站標題動態 */
 #sidebar .site-title {
   display: inline-block;
   transition: all 0.3s ease-in-out !important;
@@ -198,15 +184,13 @@ html[data-mode="dark"] #main-wrapper a:hover {
   text-decoration: none !important;
 }
 
-/* Sidebar 選單項目 Hover & Active */
+/* 導覽項目 */
 #sidebar .nav-link:hover,
 #sidebar ul li.nav-item.active .nav-link {
   background-color: rgba(255, 122, 162, 0.2) !important;
   border-radius: 12px;
-  transition: all 0.2s ease-in-out;
 }
 
-/* 選單文字與圖示變色 */
 #sidebar .nav-item.active a.nav-link span,
 #sidebar .nav-item a.nav-link:hover span,
 #sidebar .nav-link:hover i,
@@ -215,26 +199,18 @@ html[data-mode="dark"] #main-wrapper a:hover {
 }
 
 /* ==========================================================================
-   6. 右側面板與文章摘要 (Panel & TOC)
+   6. 右側面板 (TOC & Access)
    ========================================================================== */
 
-/* 側欄標題 (最近更新、熱門標籤、文章摘要) */
 #panel-wrapper .panel-heading {
   color: #C4828E !important;
-  background-color: transparent !important;
-  border: none !important;
   font-weight: 700 !important;
   font-size: 1rem !important;
   text-transform: uppercase;
 }
 
-/* 側欄區塊左側細線 */
-.access > section {
-  border-left: 3px solid #ffeef6 !important;
-}
-
-/* TOC (文章摘要) 清單與導引線 */
-#toc {
+/* 側欄區塊與 TOC 的導引線 */
+.access > section, #toc {
   border-left: 3px solid #ffeef6 !important;
 }
 
@@ -242,7 +218,7 @@ a.toc-link {
   color: #757575 !important;
 }
 
-/* 遮蓋 TOC 上方的過渡背景 (設為與 Body 相同) */
+/* 修正 TOC 頂部遮罩色 */
 #toc-wrapper::before, .toc-border-cover {
   background: #fff8fb !important;
 }
@@ -250,6 +226,11 @@ a.toc-link {
 /* ==========================================================================
    7. 專用頁面樣式 (Page Specific)
    ========================================================================== */
+
+/* 頁尾 */
+footer {
+  border-top: none !important;
+}
 
 /* 存檔頁面 (Archives) */
 #archives ul li:nth-child(odd) {
@@ -260,7 +241,6 @@ a.toc-link {
 #archives ul li a {
   color: #797C79 !important;
   font-weight: 700 !important;
-  transition: color 0.2s ease;
   text-decoration: none !important;
 }
 

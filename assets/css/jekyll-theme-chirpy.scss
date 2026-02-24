@@ -29,29 +29,37 @@ html[data-mode='light'] {
   --toc-highlight: #809D9C !important;         /* TOC 選中顏色 */
 }
 
-/* 整體背景與字體 */
-body, #topbar-wrapper, footer {
-  /* 優先使用 Fredoka 處理英數，Zen Maru Gothic 處理中文 */
-  font-family: "Fredoka", "Zen Maru Gothic", "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
-  
-  /* 關鍵：提高預設粗度 */
-  font-weight: 500 !important; 
-  color: #828282 !important;
-  background-color: #fff8fb !important;
-  
-  /* 讓文字渲染更圓潤飽滿 */
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.02rem; /* 稍微拉開字距，增加透氣感 */
+/* 統一字體：將所有文字容器、標題、搜尋結果等都納入可愛圓潤字體 */
+body, 
+#topbar-wrapper, 
+footer,
+header .post-desc, 
+#toc-bar .label, 
+#search-results a, 
+h1, h2, h3, h4, h5, .card-title {
+  /* 優先使用 Fredoka 處理英數，Zen Maru Gothic 處理中文，備援使用系統黑體 */
+  font-family: "Fredoka", "Zen Maru Gothic", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif !important;
+  -webkit-font-smoothing: antialiased; /* 文字平滑處理 */
+  letter-spacing: 0.02rem;             /* 增加文字呼吸感 */
 }
 
-/* 讓所有的標題更「胖」一點 */
-h1, h2, h3, .card-title {
-  font-family: "Fredoka", "Zen Maru Gothic", sans-serif !important;
-  font-weight: 700 !important; /* 強制標題使用 Bold */
-}
-
+/* 基礎佈局：設定背景、預設字重與文字顏色 */
+body, 
+#topbar-wrapper, 
 footer {
-  border-top: none !important; /* 移除 footer 上方分隔線 */
+  background-color: #fff8fb !important;
+  color: #828282 !important;           /* 你指定的優雅灰色 */
+  font-weight: 500 !important;         /* 基礎文字厚度，解決太細的問題 */
+}
+
+/* 標題與重要元件加強：強制更胖 (700) 並套用粉嫩色 */
+h1, h2, h3, h4, h5, .card-title, header .post-desc {
+  font-weight: 700 !important;
+}
+
+/* 移除頁尾多餘線條 */
+footer {
+  border-top: none !important;
 }
 
 /* ==========================================================================

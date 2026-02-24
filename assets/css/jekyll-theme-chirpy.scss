@@ -23,7 +23,7 @@
 /* 核心變數代換 (優先消滅藍色) */
 html:not([data-mode]), 
 html[data-mode='light'] {
-  --text-color: #828282 !important;            /* 修改全站預設文字顏色 */
+  --text-color: #434343 !important;            /* 修改全站預設文字顏色 */
   --link-color: #ff69b4 !important;            /* 全域連結粉紅化 */
   --link-underline-color: #ffc0cb !important;
   --toc-highlight: #809D9C !important;         /* TOC 選中顏色 */
@@ -48,7 +48,6 @@ body,
 #topbar-wrapper, 
 footer {
   background-color: #fff8fb !important;
-  color: #828282 !important;           /* 你指定的優雅灰色 */
   font-weight: 500 !important;         /* 基礎文字厚度，解決太細的問題 */
 }
 

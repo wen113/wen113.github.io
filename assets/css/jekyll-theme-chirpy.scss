@@ -13,6 +13,9 @@
 {%- endif -%}
 ';
 
+/* 導入 Google Fonts：Quicksand (英文) 與 Zen Maru Gothic (中日文) */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
 /* ==========================================================================
    1. 全域變數與基礎佈局 (Global & Layout)
    ========================================================================== */
@@ -28,9 +31,11 @@ html[data-mode='light'] {
 
 /* 整體背景與字體 */
 body, #topbar-wrapper, footer {
+  /* 優先順序：英文圓體 -> 中文圓體 -> 系統圓體 -> 預設無襯線 */
+  font-family: "Quicksand", "Zen Maru Gothic", "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
   color: #656765 !important;
   background-color: #fff8fb !important;
-  font-family: "Nunito", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 footer {

@@ -13,8 +13,8 @@
 {%- endif -%}
 ';
 
-/* 導入 Google Fonts：Quicksand (英文) 與 Zen Maru Gothic (中日文) */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+/* 導入加重版可愛字體：Fredoka (英文) 與 Zen Maru Gothic (中日文) */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap');
 
 /* ==========================================================================
    1. 全域變數與基礎佈局 (Global & Layout)
@@ -31,11 +31,23 @@ html[data-mode='light'] {
 
 /* 整體背景與字體 */
 body, #topbar-wrapper, footer {
-  /* 優先順序：英文圓體 -> 中文圓體 -> 系統圓體 -> 預設無襯線 */
-  font-family: "Quicksand", "Zen Maru Gothic", "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
-  color: #656765 !important;
+  /* 優先使用 Fredoka 處理英數，Zen Maru Gothic 處理中文 */
+  font-family: "Fredoka", "Zen Maru Gothic", "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
+  
+  /* 關鍵：提高預設粗度 */
+  font-weight: 500 !important; 
+  color: #828282 !important;
   background-color: #fff8fb !important;
+  
+  /* 讓文字渲染更圓潤飽滿 */
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.02rem; /* 稍微拉開字距，增加透氣感 */
+}
+
+/* 讓所有的標題更「胖」一點 */
+h1, h2, h3, .card-title {
+  font-family: "Fredoka", "Zen Maru Gothic", sans-serif !important;
+  font-weight: 700 !important; /* 強制標題使用 Bold */
 }
 
 footer {

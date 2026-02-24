@@ -79,8 +79,11 @@ body {
   font-family: "Zen Maru Gothic", sans-serif !important;
   background-color: #fff8fb !important;
 }
+```
 
+```mermaid
 graph TD
     A[進入網頁] --> B{是否有 Banner?}
     B -- 有 --> C[哇！好可愛]
     B -- 沒有 --> D[那就加一個吧]
+```
